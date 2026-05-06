@@ -12,23 +12,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 
   <style>
-    /* ============================================================
-       Pronova — Showcase
-       Brand: warm orange (#F97316) on cream/white,
-       editorial typography, refined spacing, subtle motion.
-       ============================================================ */
-
     :root {
-      /* Brand */
       --primary: #F97316;
       --primary-dark: #EA580C;
       --primary-light: #FB923C;
       --accent-light: #FFF7ED;
       --accent-soft: #FEF3E8;
 
-      /* Surfaces */
-      --bg: #FAF7F2;          /* warm cream */
-      --bg-2: #F2F2F7;        /* iOS gray */
+      --bg: #FAF7F2;
+      --bg-2: #F2F2F7;
       --surface: #FFFFFF;
       --surface-soft: #FBF8F3;
       --ink: #1C1C1E;
@@ -37,7 +29,6 @@
       --muted-2: #8E8E93;
       --hairline: #E8E4DC;
 
-      /* Status / accents */
       --success: #34C759;
       --success-soft: #ECFDF3;
       --blue: #3B82F6;
@@ -46,12 +37,10 @@
       --pink-soft: #FDF2F8;
       --purple: #8B5CF6;
 
-      /* Type */
       --font-display: 'Nunito', serif;
       --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
       --font-mono: 'Nunito', ui-monospace, monospace;
 
-      /* Layout */
       --max: 1200px;
       --radius-sm: 12px;
       --radius: 20px;
@@ -73,7 +62,6 @@
       overflow-x: hidden;
     }
 
-    /* Subtle paper grain overlay */
     body::before {
       content: "";
       position: fixed; inset: 0;
@@ -97,7 +85,6 @@
       z-index: 2;
     }
 
-    /* ========================  Typography  ======================== */
     h1, h2, h3, h4 {
       font-family: var(--font-display);
       font-weight: 500;
@@ -147,7 +134,6 @@
       max-width: 60ch;
     }
 
-    /* ========================  Buttons  ======================== */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -183,7 +169,6 @@
     }
     .btn:hover .btn-arrow { transform: translateX(4px); }
 
-    /* ========================  Nav  ======================== */
     .nav {
       position: sticky;
       top: 0;
@@ -236,7 +221,6 @@
       .nav-links { display: none; }
     }
 
-    /* ========================  Hero  ======================== */
     .hero {
       padding: 96px 0 72px;
       position: relative;
@@ -271,7 +255,6 @@
     .dot:nth-child(2) { opacity: 0.55; }
     .dot:nth-child(3) { opacity: 0.3; }
 
-    /* Phone mockup */
     .phone-stage {
       position: relative;
       display: grid; place-items: center;
@@ -313,7 +296,6 @@
       object-position: top;
     }
 
-    /* Floating accent card behind phone */
     .float-card {
       position: absolute;
       background: var(--surface);
@@ -372,7 +354,6 @@
       .float-card.fc-2 { right: -4%; }
     }
 
-    /* ========================  Marquee strip  ======================== */
     .strip {
       background: var(--ink);
       color: #fff;
@@ -404,7 +385,6 @@
       to   { transform: translateX(-50%); }
     }
 
-    /* ========================  Stats  ======================== */
     .stats {
       padding: 80px 0;
     }
@@ -440,7 +420,6 @@
       .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--hairline); }
     }
 
-    /* ========================  Section heads  ======================== */
     .section {
       padding: 96px 0;
       position: relative;
@@ -457,7 +436,6 @@
       margin-top: 24px;
     }
 
-    /* ========================  Categories  ======================== */
     .cats {
       background: var(--surface);
       border-top: 1px solid var(--hairline);
@@ -537,7 +515,6 @@
       .cat-grid { grid-template-columns: 1fr; }
     }
 
-    /* ========================  Feature rows  ======================== */
     .feature {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -627,7 +604,6 @@
       aspect-ratio: 9 / 19.5;
     }
 
-    /* Annotation badge */
     .anno {
       position: absolute;
       z-index: 3;
@@ -663,7 +639,6 @@
       .phone-sm { width: 240px; }
     }
 
-    /* ========================  Question types  ======================== */
     .qtypes-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -714,7 +689,6 @@
       .qtypes-grid { grid-template-columns: 1fr; }
     }
 
-    /* ========================  Showcase strip  ======================== */
     .showcase {
       background: var(--ink);
       color: #fff;
@@ -767,7 +741,6 @@
       color: #fff;
     }
 
-    /* ========================  CTA  ======================== */
     .cta {
       padding: 120px 0;
       text-align: center;
@@ -798,7 +771,6 @@
       background: var(--hairline);
     }
 
-    /* ========================  Footer  ======================== */
     .footer {
       background: var(--surface);
       border-top: 1px solid var(--hairline);
@@ -845,7 +817,6 @@
       .footer-base { flex-direction: column; gap: 12px; text-align: center; }
     }
 
-    /* ========================  Reveal animations  ======================== */
     .reveal {
       opacity: 0;
       transform: translateY(28px);
@@ -871,7 +842,6 @@
 </head>
 <body>
 
-  <!-- ============== NAV ============== -->
   <header class="nav" id="nav">
     <div class="container nav-inner">
       <a href="#" class="logo">
@@ -899,7 +869,6 @@
     </div>
   </header>
 
-  <!-- ============== HERO ============== -->
   <section class="hero">
     <div class="container">
       <div class="hero-grid">
@@ -955,15 +924,13 @@
     </div>
   </section>
 
-  <!-- ============== MARQUEE STRIP ============== -->
   <div class="strip" aria-hidden="true">
     <div class="strip-track">
-      <span>YDS<span class="sep"></span>YÖKDİL<span class="sep"></span>YDT<span class="sep"></span><em>Detaylı çözüm</em><span class="sep"></span>Kategori bazlı<span class="sep"></span><em>İlerleme takibi</em><span class="sep"></span>180 dakika<span class="sep"></span>80 soru<span class="sep"></span><em>B2 — C1</em><span class="sep"></span></span>
-      <span>YDS<span class="sep"></span>YÖKDİL<span class="sep"></span>YDT<span class="sep"></span><em>Detaylı çözüm</em><span class="sep"></span>Kategori bazlı<span class="sep"></span><em>İlerleme takibi</em><span class="sep"></span>180 dakika<span class="sep"></span>80 soru<span class="sep"></span><em>B2 — C1</em><span class="sep"></span></span>
+      <span>YDS<span class="sep"></span>YÖKDİL<span class="sep"></span>YDT<span class="sep"></span><em>Detaylı çözüm</em><span class="sep"></span>Kategori bazlı<span class="sep"></span><em>İlerleme takibi</em><em>B2 — C1</em><span class="sep"></span></span>
+      <span>YDS<span class="sep"></span>YÖKDİL<span class="sep"></span>YDT<span class="sep"></span><em>Detaylı çözüm</em><span class="sep"></span>Kategori bazlı<span class="sep"></span><em>İlerleme takibi</em><em>B2 — C1</em><span class="sep"></span></span>
     </div>
   </div>
 
-  <!-- ============== STATS ============== -->
   <section class="stats">
     <div class="container">
       <div class="stats-grid reveal">
@@ -987,7 +954,6 @@
     </div>
   </section>
 
-  <!-- ============== CATEGORIES ============== -->
   <section class="section cats" id="kategoriler">
     <div class="container">
       <div class="section-head reveal">
@@ -1016,7 +982,7 @@
           <p>Yükseköğretim Kurumları Yabancı Dil Sınavı için akademik içerikli, alana özel hazırlanmış denemeler. Sosyal, fen ve sağlık alanlarına özel içerik.</p>
           <div class="cat-stats">
             <div><strong>21</strong><span>Sınav</span></div>
-            <div><strong>80</strong><span>Soru</span></div>
+            <div><strong>220</strong><span>Soru</span></div>
             <div><strong>150dk</strong><span>Süre</span></div>
           </div>
         </article>
@@ -1028,7 +994,7 @@
           <p>YKS kapsamında uygulanan 80 soruluk yabancı dil testi için hazırlanmış denemeler. Dil bölümü adayları için kritik hazırlık kaynağı.</p>
           <div class="cat-stats">
             <div><strong>23</strong><span>Sınav</span></div>
-            <div><strong>80</strong><span>Soru</span></div>
+            <div><strong>250</strong><span>Soru</span></div>
             <div><strong>YKS</strong><span>Kapsamı</span></div>
           </div>
         </article>
@@ -1036,7 +1002,6 @@
     </div>
   </section>
 
-  <!-- ============== FEATURES ============== -->
   <section class="section" id="ozellikler" style="padding-top: 48px;">
     <div class="container">
       <div class="section-head reveal">
@@ -1045,7 +1010,6 @@
         <p class="lead">Pronova'nın temel felsefesi basit: yalnızca soru çözmek yetmez, neyi neden yanlış yaptığını bilmek gerekir. Her özellik bu ilke etrafında tasarlandı.</p>
       </div>
 
-      <!-- Feature 1: Detailed solutions -->
       <div class="feature reveal">
         <div class="feature-text">
           <div class="feature-num">01</div>
@@ -1064,11 +1028,10 @@
               <img src="images/screen-question.png" alt="Detaylı çözüm ekranı" />
             </div>
           </div>
-          <div class="anno anno-2"><span class="anno-dot"></span> Türkçe açıklama</div>
+          <div class="anno anno-2"><span class="anno-dot"></span> Detaylı açıklama</div>
         </div>
       </div>
 
-      <!-- Feature 2: Statistics -->
       <div class="feature reverse reveal">
         <div class="feature-text">
           <div class="feature-num">02</div>
@@ -1091,7 +1054,6 @@
         </div>
       </div>
 
-      <!-- Feature 3: Categories -->
       <div class="feature reveal">
         <div class="feature-text">
           <div class="feature-num">03</div>
@@ -1110,13 +1072,11 @@
               <img src="images/screen-detail.png" alt="Sınav detay ekranı" />
             </div>
           </div>
-          <div class="anno anno-2"><span class="anno-dot blue"></span> 180 dakika · 80 soru</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============== QUESTION TYPES ============== -->
   <section class="section" id="soru-tipleri" style="background: var(--surface); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);">
     <div class="container">
       <div class="section-head reveal">
@@ -1139,7 +1099,6 @@
     </div>
   </section>
 
-  <!-- ============== SHOWCASE STRIP (DARK) ============== -->
   <section class="showcase" id="vitrin">
     <div class="container">
       <div class="section-head reveal" style="margin-bottom: 0;">
@@ -1173,7 +1132,6 @@
     </div>
   </section>
 
-  <!-- ============== CTA ============== -->
   <section class="cta" id="indir">
     <div class="container">
       <span class="eyebrow no-line reveal" style="justify-content: center; display: flex;">Hazır mısın?</span>
@@ -1194,7 +1152,6 @@
     </div>
   </section>
 
-  <!-- ============== FOOTER ============== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -1240,10 +1197,8 @@
   </footer>
 
   <script>
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Sticky nav border
     const nav = document.getElementById('nav');
     const onScroll = () => {
       if (window.scrollY > 8) nav.classList.add('scrolled');
@@ -1252,7 +1207,6 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    // Reveal on scroll
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (e.isIntersecting) {
