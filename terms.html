@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pronova — Kullanım Şartları</title>
-  <meta name="description" content="Pronova uygulaması kullanım şartları, haklar ve sorumluluklar." />
+  <title>Pronova — Kullanım Şartları (Telif Hakları)</title>
+  <meta name="description" content="Pronova uygulaması telif hakları ve kullanım lisansı şartları." />
   <meta name="theme-color" content="#F97316" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,31 +20,18 @@
       --accent-soft: #FEF3E8;
 
       --bg: #FAF7F2;
-      --bg-2: #F2F2F7;
       --surface: #FFFFFF;
-      --surface-soft: #FBF8F3;
       --ink: #1C1C1E;
       --ink-2: #2A2A2E;
       --muted: #6B6B70;
       --muted-2: #8E8E93;
       --hairline: #E8E4DC;
 
-      --success: #34C759;
-      --success-soft: #ECFDF3;
-      --blue: #3B82F6;
-      --blue-soft: #EEF4FF;
-      --pink: #EC4899;
-      --pink-soft: #FDF2F8;
-      --purple: #8B5CF6;
-
       --font-display: 'Nunito', serif;
-      --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
+      --font-body: 'Nunito', system-ui, sans-serif;
 
       --max: 1000px;
-      --radius-sm: 12px;
-      --radius: 20px;
       --radius-lg: 32px;
-      --radius-xl: 44px;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -141,7 +128,6 @@
       top: 0;
       z-index: 50;
       backdrop-filter: saturate(180%) blur(14px);
-      -webkit-backdrop-filter: saturate(180%) blur(14px);
       background: rgba(250, 247, 242, 0.78);
       border-bottom: 1px solid transparent;
     }
@@ -172,7 +158,6 @@
       background: var(--primary);
       display: grid; place-items: center;
       color: #fff;
-      box-shadow: inset 0 -6px 12px rgba(0,0,0,0.08);
     }
     .logo-mark svg { width: 16px; height: 16px; }
 
@@ -209,9 +194,6 @@
       margin: 1rem 0 1.5rem;
       padding-left: 1.5rem;
     }
-    .legal-content li {
-      margin-bottom: 0.5rem;
-    }
 
     .legal-content .last-updated {
       font-size: 14px;
@@ -219,6 +201,15 @@
       padding-bottom: 24px;
       border-bottom: 1px solid var(--hairline);
       margin-bottom: 24px;
+    }
+
+    .copyright-notice {
+      background: var(--accent-light);
+      border-left: 4px solid var(--primary);
+      padding: 20px 24px;
+      border-radius: 16px;
+      margin: 32px 0;
+      font-weight: 500;
     }
 
     .back-home {
@@ -242,6 +233,7 @@
       font-size: 13px;
       color: var(--muted-2);
     }
+
     @media (max-width: 720px) {
       .legal-content { padding: 32px 24px; }
       .footer-base { flex-direction: column; gap: 12px; text-align: center; }
@@ -254,14 +246,14 @@
     <div class="container nav-inner">
       <a href="#" class="logo" onclick="window.location.href='index.html'; return false;">
         <span class="logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M5 12l4 4L19 6"/>
           </svg>
         </span>
         Pronova
       </a>
       <a href="#" class="btn btn-secondary" onclick="window.location.href='index.html'; return false;">
-        <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
         Ana Sayfaya Dön
       </a>
     </div>
@@ -269,7 +261,7 @@
 
   <section class="hero">
     <div class="container">
-      <span class="eyebrow">Yasal</span>
+      <span class="eyebrow">Yasal / Telif Hakları</span>
       <h1>Kullanım Şartları</h1>
     </div>
   </section>
@@ -280,63 +272,75 @@
         Son güncelleme: 6 Mayıs 2026
       </div>
 
-      <p><strong>Pronova</strong> ("Uygulama", "biz", "bize" veya "Pronova") olarak, kullanıcılarımızın ("kullanıcı", "siz" veya "üye") hizmetlerimizi güvenli ve huzurlu bir ortamda kullanmasını sağlamak önceliğimizdir. Bu Kullanım Şartları ("Şartlar"), Pronova uygulamasına erişiminizi ve uygulamayı kullanımınızı düzenler.</p>
+      <div class="copyright-notice">
+        ⚖️ <strong>Pronova</strong> bir üyelik veya veri toplama sistemi içermez. Bu uygulama, tamamen telif hakkı saklı içeriklerden oluşmaktadır. Aşağıdaki şartlar, uygulama içindeki tüm materyallerin kullanımını düzenler.
+      </div>
 
-      <h2>1. Kabul Edilen Şartlar</h2>
-      <p>Pronova uygulamasını indirerek, kurarak, kopyalayarak veya herhangi bir şekilde kullanarak, bu Kullanım Şartlarını okuduğunuzu, anladığınızı ve bunlarla bağlı kalmayı kabul ettiğinizi beyan edersiniz. Bu şartları kabul etmiyorsanız, lütfen uygulamayı kullanmayın ve cihazınızdan kaldırın.</p>
+      <p><strong>Pronova</strong> ("Uygulama", "biz" veya "Pronova") olarak, tüm denemeler, sorular, çözüm açıklamaları, görsel tasarım, metinler, logolar ve uygulama içindeki diğer tüm materyaller ("İçerik") üzerinde <strong>tüm telif hakları ve fikri mülkiyet hakları</strong> saklıdır. Bu Kullanım Şartları, uygulamamızı indiren ve kullanan herkes için geçerlidir.</p>
 
-      <h2>2. Hizmetin Tanımı</h2>
-      <p>Pronova; YDS, YÖKDİL ve YDT gibi yabancı dil sınavlarına hazırlık amacıyla kategori bazlı denemeler, detaylı soru çözümleri, performans istatistikleri ve ilerleme takibi sunan bir mobil uygulamadır. Hizmetlerimiz yalnızca kişisel, ticari olmayan eğitim amaçlıdır.</p>
+      <h2>1. Telif Hakkı Sahipliği</h2>
+      <p>Pronova uygulamasında yer alan tüm içerik (başta olmak üzere: YDS, YÖKDİL ve YDT denemeleri, sorular, cevap anahtarları, detaylı çözüm metinleri, kelime listeleri, dilbilgisi notları, görsel arayüz, simgeler, tipografi, ekran düzenleri, yazılım kodu ve veritabanı yapısı) <strong>Pronova Eğitim Teknolojileri'ne</strong> aittir ve 5846 sayılı Fikir ve Sanat Eserleri Kanunu ile uluslararası telif hukuku kapsamında korunmaktadır.</p>
+      <p>Uygulama içinde kullanılan üçüncü taraf açık kaynak bileşenler (varsa) ilgili lisanslarına tabidir. Bunun dışında kalan hiçbir içerik kamu malı değildir.</p>
 
-      <h2>3. Hesap ve Kullanıcı Sorumlulukları</h2>
-      <p>Uygulamanın bazı özellikleri bir kullanıcı hesabı oluşturmanızı gerektirebilir. Hesap bilgilerinizin (e-posta, şifre vb.) gizliliğini korumak sizin sorumluluğunuzdadır. Hesabınız altında gerçekleşen tüm faaliyetlerden siz sorumlusunuz. Aşağıdaki durumlarda hesabınızı askıya alma veya sonlandırma hakkımızı saklı tutarız:</p>
+      <h2>2. Kullanıcıya Verilen Sınırlı Lisans</h2>
+      <p><strong>Üyelik veya veri kaydı gerekmeyen</strong> bu uygulamayı indirerek, size <strong>kişisel, ticari olmayan, devredilemez ve geri alınabilir</strong> bir lisans verilmiş olur. Bu lisans kapsamında şunları <strong>yapabilirsiniz:</strong></p>
       <ul>
-        <li>Yanlış, yanıltıcı veya eksik bilgi sağlanması,</li>
-        <li>Başka bir kullanıcının hesabını kullanma girişimi,</li>
-        <li>Uygulamanın normal işleyişini bozacak eylemler (bot, script, veri kazıma vb.).</li>
+        <li>Uygulamayı kendi kişisel cihazınıza indirip, yalnızca <strong>bireysel dil sınavı hazırlık amacıyla</strong> kullanmak,</li>
+        <li>Denemeleri çözmek, çözümleri okumak, ilerlemenizi cihazınız üzerinde takip etmek (bu veriler yalnızca cihazda kalır, bize iletilmez),</li>
+        <li>Uygulamayı çevrimdışı olarak kullanmak.</li>
       </ul>
 
-      <h2>4. Fikri Mülkiyet Hakları</h2>
-      <p>Pronova uygulamasının tüm içeriği; yazılım metinleri, tasarım, logolar, grafikler, deneme soruları, çözüm açıklamaları, görseller ve diğer materyaller Pronova'ya veya lisans verenlerine aittir ve ulusal ve uluslararası telif hakkı, marka ve diğer fikri mülkiyet yasalarıyla korunmaktadır. Kullanıcı, bu materyalleri kişisel ve ticari olmayan eğitim amacı dışında kopyalayamaz, dağıtamaz, değiştiremez veya tersine mühendislik uygulayamaz.</p>
-
-      <h2>5. Kullanıcı İçeriği ve Davranış Kuralları</h2>
-      <p>Uygulama içinde yorum, not veya diğer kullanıcı etkileşim özellikleri sunduğumuz takdirde, paylaştığınız içerikten kendiniz sorumlusunuz. Aşağıdaki türde içerik veya davranışlar kesinlikle yasaktır:</p>
+      <h2>3. Kesinlikle Yasaklanan Eylemler</h2>
+      <p>Aşağıdaki fiiller, telif hakkı ihlali olarak değerlendirilir ve hukuki ve cezai yaptırımlara tabidir:</p>
       <ul>
-        <li>Yasa dışı, tehdit edici, taciz edici, nefret söylemi içeren veya şiddeti teşvik eden içerikler,</li>
-        <li>Başkalarının gizlilik haklarını ihlal eden paylaşımlar,</li>
-        <li>Spam, reklam veya yetkisiz ticari içerik,</li>
-        <li>Kötü amaçlı yazılım veya zararlı kodlar.</li>
+        <li><strong>Kopyalama ve Dağıtma:</strong> Uygulama içindeki hiçbir soruyu, çözüm metnini veya görseli —kısmen veya tamamen— ekran görüntüsü alarak, kopyala-yapıştır yaparak, PDF/Word/Excel gibi dosya formatlarına aktararak, yazılı veya dijital ortamda üçüncü kişilerle paylaşmak, satmak veya dağıtmak.</li>
+        <li><strong>Yeniden Yayınlama:</strong> Pronova içeriğini (denemeler, sorular, çözümler) herhangi bir web sitesinde, sosyal medya hesabında, forumda, YouTube videosunda, e-kitapta veya basılı materyalde izinsiz olarak yayınlamak.</li>
+        <li><strong>Tersine Mühendislik ve Kırma:</strong> Uygulamanın kaynak kodunu, veritabanı yapısını veya güvenlik önlemlerini analiz etmek, dekompile etmek, deşifre etmek veya korumalarını aşmak.</li>
+        <li><strong>Türev Eser Oluşturma:</strong> Soruları değiştirerek, yeniden düzenleyerek veya uyarlayarak yeni bir deneme seti veya eğitim materyali oluşturmak.</li>
+        <li><strong>Otomatik Erişim (Bot/Script):</strong> Herhangi bir otomatik araç (bot, crawler, scraper) kullanarak uygulamadaki sorulara veya çözümlere toplu olarak erişmek veya veri çekmek.</li>
       </ul>
-      <p>Bu kuralları ihlal eden kullanıcıların içeriklerini kaldırma ve/veya hesaplarını askıya alma hakkımız saklıdır.</p>
 
-      <h2>6. Ücretlendirme ve İptaller</h2>
-      <p>Pronova, temel özellikleriyle ücretsiz olarak sunulmaktadır. Gelecekte sunulabilecek premium özellikler veya abonelik hizmetleri ayrıca duyurulacak ve bu durumda geçerli ücretlendirme ve iptal koşulları ilgili ekranda belirtilecektir. Satın almalar, ilgili platformun (App Store / Google Play) geçerli politikalarına tabidir.</p>
+      <h2>4. İhlallerin Sonuçları</h2>
+      <p>Bu Kullanım Şartları'nı ihlal ettiğinizi tespit edersek, yasal yollara başvurma hakkımız saklıdır. Telif hakkı ihlalleri:</p>
+      <ul>
+        <li>5846 sayılı Fikir ve Sanat Eserleri Kanunu'na göre <strong>hapis cezası</strong> ve <strong>adli para cezası</strong> gerektirebilir,</li>
+        <li>Tazminat davalarına konu olabilir (maddi ve manevi tazminat),</li>
+        <li>İnternet servis sağlayıcıları veya platformlar (App Store / Google Play) nezdinde şikayet edilerek uygulamaya erişiminizin engellenmesine yol açabilir.</li>
+      </ul>
+      <p>Herhangi bir ihlal durumunda, fesih bildirimi yapmaksızın lisansınızı <strong>derhal feshetme</strong> ve uygulamayı sizin için kullanılamaz hale getirme hakkımızı saklı tutarız.</p>
 
-      <h2>7. Garanti Reddi ve Sorumluluk Sınırı</h2>
-      <p>Pronova, uygulamayı "olduğu gibi" ve "mevcut olduğu şekliyle" sunar. Uygulamanın kesintisiz, hatasız veya güvenli olacağını garanti etmiyoruz. Pronova veya bağlı kuruluşları, uygulamanın kullanımından kaynaklanan hiçbir dolaylı, arızi, özel veya sonuç olarak ortaya çıkan zararlardan sorumlu tutulamaz. Yürürlükteki yasaların izin verdiği azami ölçüde, Pronova'nın bu şartlar kapsamındaki toplam sorumluluğu, son 6 ay içinde bize ödediğiniz (varsa) ücretlerle sınırlıdır.</p>
+      <h2>5. Kullanıcı Verisi Yoktur (Önemli Not)</h2>
+      <p>Pronova, <strong>herhangi bir üyelik sistemi, hesap oluşturma, e-posta toplama, şifre saklama veya kişisel veri işleme faaliyeti içermez.</strong> Uygulama içindeki ilerleme bilgileri (çözülen sorular, doğru/yanlış sayıları, gün serisi vb.) yalnızca sizin cihazınızda (local storage) saklanır. Bu veriler bize iletilmez, sunucularımızda tutulmaz, üçüncü taraflarla paylaşılmaz. Bu nedenle, KVKK veya GDPR kapsamında bir "veri sorumlusu" değiliz.</p>
 
-      <h2>8. Üçüncü Taraf Bağlantılar</h2>
-      <p>Uygulamamız, kontrolümüz dışındaki üçüncü taraf web sitelerine veya hizmetlere bağlantılar içerebilir. Bu tür bağlantıların içeriğinden veya gizlilik uygulamalarından sorumlu değiliz. Bağlantıları kullanmadan önce ilgili üçüncü tarafın şartlarını incelemeniz önerilir.</p>
+      <h2>6. Adil Kullanım (Fair Use) Sınırı</h2>
+      <p>Telif hukukunda <strong>“adil kullanım” (teftiş, eleştiri, eğitim amaçlı kısa alıntı)</strong> gibi istisnalar mevcuttur. Ancak bu istisnalar:</p>
+      <ul>
+        <li>Uygulamanın özünü oluşturan deneme sorularının veya çözümlerinin kopyalanarak başka bir platformda yayınlanmasını,</li>
+        <li>Ticari veya eğitim kurumu içi kitapçık haline getirilmesini,</li>
+        <li>Sosyal medyada “bir soru paylaşma” adı altında telifli içeriğin herkese açık şekilde dağıtılmasını <strong>kapsamaz</strong>.</li>
+      </ul>
+      <p>Adil kullanım sınırlarını aşan her durumda telif hakkı ihlali oluşur.</p>
+
+      <h2>7. Uygulama İçeriğinin Korunması</h2>
+      <p>Pronova'daki sorular ve çözümler, uzman eğitim kadrosu tarafından aylar süren bir emekle hazırlanmış, özgün ve sınav formatlarına uygun şekilde tasarlanmıştır. Bu içeriklerin izinsiz kullanımı, hem emeğin çalınması hem de Pronova'nın ticari varlığına doğrudan zarar verir. Bu nedenle telif ihlallerini tespit etmek için periyodik olarak dijital izleme yapılmakta ve ihlal durumunda yasal süreç başlatılmaktadır.</p>
+
+      <h2>8. Üçüncü Taraf Bağlantıları ve Açık Kaynak</h2>
+      <p>Uygulamamız, üçüncü taraf hizmetlere (örneğin fontlar için Google Fonts) bağlantılar veya açık kaynak kütüphaneler kullanabilir. Bu kütüphaneler kendi lisanslarına tabidir (<i>MIT, Apache 2.0, vb.</i>). Ancak bu durum, Pronova'ya ait telifli içeriğin haklarını değiştirmez veya devretmez.</p>
 
       <h2>9. Değişiklikler</h2>
-      <p>Bu Kullanım Şartları'nı zaman zaman güncelleme hakkımız saklıdır. Değişiklikleri uygulamada veya web sitemizde yayınlayarak sizi bilgilendireceğiz. Önemli değişiklikler için ek bildirim (e-posta veya uygulama içi bildirim) gönderebiliriz. Değişikliklerin yürürlüğe girmesinden sonra uygulamayı kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir.</p>
+      <p>Bu Kullanım Şartları'nı zaman zaman güncelleme hakkımız saklıdır. Değişiklikler uygulama içinde veya web sitemizde yayınlandığı tarihten itibaren geçerlidir. Uygulamayı kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir.</p>
 
-      <h2>10. Fesih</h2>
-      <p>Bu Şartlar, siz veya Pronova tarafından feshedilene kadar yürürlükte kalacaktır. Bu Şartları ihlal etmeniz durumunda, herhangi bir bildirimde bulunmaksızın hesabınızı derhal feshetme ve/veya uygulamaya erişiminizi engelleme hakkımız saklıdır. Fesih durumunda, yasaların gerektirdiği haller dışında, içeriğinizin bir kopyasını saklama yükümlülüğümüz yoktur.</p>
-
-      <h2>11. Uygulanacak Hukuk ve Yetki</h2>
-      <p>Bu Kullanım Şartları, yerleşik yasalarımız göz önünde bulundurularak yorumlanacak ve bu yasalara tabi olacaktır. Bu Şartlardan kaynaklanan veya bunlarla ilgili her türlü uyuşmazlık, Türkiye Cumhuriyeti mahkemelerinin münhasır yetkisi altında çözümlenecektir.</p>
-
-      <h2>12. Bize Ulaşın</h2>
-      <p>Bu Kullanım Şartları veya uygulamamız hakkında herhangi bir sorunuz varsa, lütfen bize aşağıdaki adresten ulaşın:</p>
+      <h2>10. İletişim ve Telif İhlali Bildirimi</h2>
+      <p>Bu şartlarla ilgili sorularınız veya bir telif hakkı ihlali tespit etmeniz durumunda bize aşağıdaki adresten ulaşabilirsiniz:</p>
       <p>
-        <strong>E-posta:</strong> <a href="mailto:legal@pronova.com">legal@pronova.com</a><br>
+        <strong>E-posta:</strong> <a href="mailto:copyright@pronova.com">copyright@pronova.com</a><br>
         <strong>Adres:</strong> Pronova Eğitim Teknolojileri, İstanbul, Türkiye
       </p>
+      <p>Üçüncü şahıslar tarafından Pronova içeriğinin izinsiz kullanıldığını görürseniz, lütfen bize bildirin.</p>
 
       <div class="back-home">
         <a href="#" onclick="window.location.href='index.html'; return false;" class="btn btn-secondary">
-          <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+          <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
           Ana Sayfaya Dön
         </a>
       </div>
@@ -354,17 +358,11 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
     const nav = document.getElementById('nav');
-    const onScroll = () => {
+    window.addEventListener('scroll', () => {
       if (window.scrollY > 8) nav.classList.add('scrolled');
       else nav.classList.remove('scrolled');
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    if (!window.location.pathname.includes('index') && window.location.pathname !== '/') {
-    }
+    });
   </script>
 </body>
 </html>
