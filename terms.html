@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pronova — Kullanım Şartları</title>
+  <meta name="description" content="Pronova uygulaması kullanım şartları, haklar ve sorumluluklar." />
+  <meta name="theme-color" content="#F97316" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --primary: #F97316;
+      --primary-dark: #EA580C;
+      --primary-light: #FB923C;
+      --accent-light: #FFF7ED;
+      --accent-soft: #FEF3E8;
+
+      --bg: #FAF7F2;
+      --bg-2: #F2F2F7;
+      --surface: #FFFFFF;
+      --surface-soft: #FBF8F3;
+      --ink: #1C1C1E;
+      --ink-2: #2A2A2E;
+      --muted: #6B6B70;
+      --muted-2: #8E8E93;
+      --hairline: #E8E4DC;
+
+      --success: #34C759;
+      --success-soft: #ECFDF3;
+      --blue: #3B82F6;
+      --blue-soft: #EEF4FF;
+      --pink: #EC4899;
+      --pink-soft: #FDF2F8;
+      --purple: #8B5CF6;
+
+      --font-display: 'Nunito', serif;
+      --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
+
+      --max: 1000px;
+      --radius-sm: 12px;
+      --radius: 20px;
+      --radius-lg: 32px;
+      --radius-xl: 44px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--bg);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin: 0;
+      color: var(--ink);
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: clamp(24px, 3.5vw, 32px);
+      margin-top: 40px;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-size: clamp(20px, 2.8vw, 24px);
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 24px; height: 1px;
+      background: currentColor;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.25s ease;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--hairline);
+    }
+    .btn-secondary:hover {
+      background: var(--surface);
+      border-color: var(--ink);
+    }
+    .btn-arrow {
+      transition: transform 0.25s ease;
+    }
+    .btn:hover .btn-arrow { transform: translateX(-4px); }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: saturate(180%) blur(14px);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
+      background: rgba(250, 247, 242, 0.78);
+      border-bottom: 1px solid transparent;
+    }
+    .nav.scrolled {
+      border-bottom-color: var(--hairline);
+      background: rgba(250, 247, 242, 0.92);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .logo-mark {
+      width: 30px; height: 30px;
+      border-radius: 9px;
+      background: var(--primary);
+      display: grid; place-items: center;
+      color: #fff;
+      box-shadow: inset 0 -6px 12px rgba(0,0,0,0.08);
+    }
+    .logo-mark svg { width: 16px; height: 16px; }
+
+    .hero {
+      padding: 60px 0 40px;
+    }
+
+    .legal-content {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 48px 56px;
+      margin: 32px 0 80px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.03);
+      border: 1px solid var(--hairline);
+    }
+
+    .legal-content p, .legal-content li {
+      color: var(--ink-2);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+
+    .legal-content a {
+      color: var(--primary);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .legal-content a:hover {
+      border-bottom-color: var(--primary);
+    }
+
+    .legal-content ul, .legal-content ol {
+      margin: 1rem 0 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .legal-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .legal-content .last-updated {
+      font-size: 14px;
+      color: var(--muted);
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--hairline);
+      margin-bottom: 24px;
+    }
+
+    .back-home {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .footer {
+      background: var(--surface);
+      border-top: 1px solid var(--hairline);
+      padding: 48px 0 36px;
+      margin-top: 40px;
+    }
+    .footer-base {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 28px;
+      border-top: 1px solid var(--hairline);
+      font-size: 13px;
+      color: var(--muted-2);
+    }
+    @media (max-width: 720px) {
+      .legal-content { padding: 32px 24px; }
+      .footer-base { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo" onclick="window.location.href='index.html'; return false;">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12l4 4L19 6"/>
+          </svg>
+        </span>
+        Pronova
+      </a>
+      <a href="#" class="btn btn-secondary" onclick="window.location.href='index.html'; return false;">
+        <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        Ana Sayfaya Dön
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Yasal</span>
+      <h1>Kullanım Şartları</h1>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="legal-content">
+      <div class="last-updated">
+        Son güncelleme: 6 Mayıs 2026
+      </div>
+
+      <p><strong>Pronova</strong> ("Uygulama", "biz", "bize" veya "Pronova") olarak, kullanıcılarımızın ("kullanıcı", "siz" veya "üye") hizmetlerimizi güvenli ve huzurlu bir ortamda kullanmasını sağlamak önceliğimizdir. Bu Kullanım Şartları ("Şartlar"), Pronova uygulamasına erişiminizi ve uygulamayı kullanımınızı düzenler.</p>
+
+      <h2>1. Kabul Edilen Şartlar</h2>
+      <p>Pronova uygulamasını indirerek, kurarak, kopyalayarak veya herhangi bir şekilde kullanarak, bu Kullanım Şartlarını okuduğunuzu, anladığınızı ve bunlarla bağlı kalmayı kabul ettiğinizi beyan edersiniz. Bu şartları kabul etmiyorsanız, lütfen uygulamayı kullanmayın ve cihazınızdan kaldırın.</p>
+
+      <h2>2. Hizmetin Tanımı</h2>
+      <p>Pronova; YDS, YÖKDİL ve YDT gibi yabancı dil sınavlarına hazırlık amacıyla kategori bazlı denemeler, detaylı soru çözümleri, performans istatistikleri ve ilerleme takibi sunan bir mobil uygulamadır. Hizmetlerimiz yalnızca kişisel, ticari olmayan eğitim amaçlıdır.</p>
+
+      <h2>3. Hesap ve Kullanıcı Sorumlulukları</h2>
+      <p>Uygulamanın bazı özellikleri bir kullanıcı hesabı oluşturmanızı gerektirebilir. Hesap bilgilerinizin (e-posta, şifre vb.) gizliliğini korumak sizin sorumluluğunuzdadır. Hesabınız altında gerçekleşen tüm faaliyetlerden siz sorumlusunuz. Aşağıdaki durumlarda hesabınızı askıya alma veya sonlandırma hakkımızı saklı tutarız:</p>
+      <ul>
+        <li>Yanlış, yanıltıcı veya eksik bilgi sağlanması,</li>
+        <li>Başka bir kullanıcının hesabını kullanma girişimi,</li>
+        <li>Uygulamanın normal işleyişini bozacak eylemler (bot, script, veri kazıma vb.).</li>
+      </ul>
+
+      <h2>4. Fikri Mülkiyet Hakları</h2>
+      <p>Pronova uygulamasının tüm içeriği; yazılım metinleri, tasarım, logolar, grafikler, deneme soruları, çözüm açıklamaları, görseller ve diğer materyaller Pronova'ya veya lisans verenlerine aittir ve ulusal ve uluslararası telif hakkı, marka ve diğer fikri mülkiyet yasalarıyla korunmaktadır. Kullanıcı, bu materyalleri kişisel ve ticari olmayan eğitim amacı dışında kopyalayamaz, dağıtamaz, değiştiremez veya tersine mühendislik uygulayamaz.</p>
+
+      <h2>5. Kullanıcı İçeriği ve Davranış Kuralları</h2>
+      <p>Uygulama içinde yorum, not veya diğer kullanıcı etkileşim özellikleri sunduğumuz takdirde, paylaştığınız içerikten kendiniz sorumlusunuz. Aşağıdaki türde içerik veya davranışlar kesinlikle yasaktır:</p>
+      <ul>
+        <li>Yasa dışı, tehdit edici, taciz edici, nefret söylemi içeren veya şiddeti teşvik eden içerikler,</li>
+        <li>Başkalarının gizlilik haklarını ihlal eden paylaşımlar,</li>
+        <li>Spam, reklam veya yetkisiz ticari içerik,</li>
+        <li>Kötü amaçlı yazılım veya zararlı kodlar.</li>
+      </ul>
+      <p>Bu kuralları ihlal eden kullanıcıların içeriklerini kaldırma ve/veya hesaplarını askıya alma hakkımız saklıdır.</p>
+
+      <h2>6. Ücretlendirme ve İptaller</h2>
+      <p>Pronova, temel özellikleriyle ücretsiz olarak sunulmaktadır. Gelecekte sunulabilecek premium özellikler veya abonelik hizmetleri ayrıca duyurulacak ve bu durumda geçerli ücretlendirme ve iptal koşulları ilgili ekranda belirtilecektir. Satın almalar, ilgili platformun (App Store / Google Play) geçerli politikalarına tabidir.</p>
+
+      <h2>7. Garanti Reddi ve Sorumluluk Sınırı</h2>
+      <p>Pronova, uygulamayı "olduğu gibi" ve "mevcut olduğu şekliyle" sunar. Uygulamanın kesintisiz, hatasız veya güvenli olacağını garanti etmiyoruz. Pronova veya bağlı kuruluşları, uygulamanın kullanımından kaynaklanan hiçbir dolaylı, arızi, özel veya sonuç olarak ortaya çıkan zararlardan sorumlu tutulamaz. Yürürlükteki yasaların izin verdiği azami ölçüde, Pronova'nın bu şartlar kapsamındaki toplam sorumluluğu, son 6 ay içinde bize ödediğiniz (varsa) ücretlerle sınırlıdır.</p>
+
+      <h2>8. Üçüncü Taraf Bağlantılar</h2>
+      <p>Uygulamamız, kontrolümüz dışındaki üçüncü taraf web sitelerine veya hizmetlere bağlantılar içerebilir. Bu tür bağlantıların içeriğinden veya gizlilik uygulamalarından sorumlu değiliz. Bağlantıları kullanmadan önce ilgili üçüncü tarafın şartlarını incelemeniz önerilir.</p>
+
+      <h2>9. Değişiklikler</h2>
+      <p>Bu Kullanım Şartları'nı zaman zaman güncelleme hakkımız saklıdır. Değişiklikleri uygulamada veya web sitemizde yayınlayarak sizi bilgilendireceğiz. Önemli değişiklikler için ek bildirim (e-posta veya uygulama içi bildirim) gönderebiliriz. Değişikliklerin yürürlüğe girmesinden sonra uygulamayı kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir.</p>
+
+      <h2>10. Fesih</h2>
+      <p>Bu Şartlar, siz veya Pronova tarafından feshedilene kadar yürürlükte kalacaktır. Bu Şartları ihlal etmeniz durumunda, herhangi bir bildirimde bulunmaksızın hesabınızı derhal feshetme ve/veya uygulamaya erişiminizi engelleme hakkımız saklıdır. Fesih durumunda, yasaların gerektirdiği haller dışında, içeriğinizin bir kopyasını saklama yükümlülüğümüz yoktur.</p>
+
+      <h2>11. Uygulanacak Hukuk ve Yetki</h2>
+      <p>Bu Kullanım Şartları, yerleşik yasalarımız göz önünde bulundurularak yorumlanacak ve bu yasalara tabi olacaktır. Bu Şartlardan kaynaklanan veya bunlarla ilgili her türlü uyuşmazlık, Türkiye Cumhuriyeti mahkemelerinin münhasır yetkisi altında çözümlenecektir.</p>
+
+      <h2>12. Bize Ulaşın</h2>
+      <p>Bu Kullanım Şartları veya uygulamamız hakkında herhangi bir sorunuz varsa, lütfen bize aşağıdaki adresten ulaşın:</p>
+      <p>
+        <strong>E-posta:</strong> <a href="mailto:legal@pronova.com">legal@pronova.com</a><br>
+        <strong>Adres:</strong> Pronova Eğitim Teknolojileri, İstanbul, Türkiye
+      </p>
+
+      <div class="back-home">
+        <a href="#" onclick="window.location.href='index.html'; return false;" class="btn btn-secondary">
+          <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+          Ana Sayfaya Dön
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-base">
+        <span>© <span id="year">2026</span> Pronova. Tüm hakları saklıdır.</span>
+        <span>YDS, YÖKDİL ve YDT hazırlık asistanınız.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const nav = document.getElementById('nav');
+    const onScroll = () => {
+      if (window.scrollY > 8) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    if (!window.location.pathname.includes('index') && window.location.pathname !== '/') {
+    }
+  </script>
+</body>
+</html>
