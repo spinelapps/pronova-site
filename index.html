@@ -37,6 +37,10 @@
       --pink-soft: #FDF2F8;
       --purple: #8B5CF6;
 
+      /* Showcase section warm peach */
+      --showcase-bg: #FBE7D2;
+      --showcase-bg-2: #F8D9B8;
+
       --font-display: 'Nunito', serif;
       --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
       --font-mono: 'Nunito', ui-monospace, monospace;
@@ -689,26 +693,69 @@
       .qtypes-grid { grid-template-columns: 1fr; }
     }
 
+    /* ====================================
+       SHOWCASE CAROUSEL — warm peach theme
+       ==================================== */
     .showcase {
-      background: var(--ink);
-      color: #fff;
-      padding: 120px 0;
+      background:
+        radial-gradient(80% 60% at 80% 0%, rgba(251,146,60,0.18), transparent 60%),
+        radial-gradient(60% 50% at 0% 100%, rgba(249,115,22,0.10), transparent 60%),
+        var(--showcase-bg);
+      color: var(--ink);
+      padding: 120px 0 96px;
       position: relative;
       overflow: hidden;
     }
-    .showcase .eyebrow { color: var(--primary-light); }
-    .showcase h2 { color: #fff; max-width: 800px; }
-    .showcase .lead { color: rgba(255,255,255,0.65); }
-    .showcase-row {
+    /* Decorative top + bottom edge */
+    .showcase::before, .showcase::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(28,28,30,0.08), transparent);
+    }
+    .showcase::before { top: 0; }
+    .showcase::after { bottom: 0; }
+
+    .showcase .eyebrow { color: var(--primary-dark); }
+    .showcase h2 { color: var(--ink); max-width: 800px; }
+    .showcase .lead { color: var(--muted); }
+
+    .showcase-carousel {
       margin-top: 64px;
+      position: relative;
+    }
+
+    /* Edge fade for visual polish */
+    .showcase-carousel::before,
+    .showcase-carousel::after {
+      content: "";
+      position: absolute;
+      top: 0; bottom: 60px;
+      width: 80px;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .showcase-carousel::before {
+      left: -2px;
+      background: linear-gradient(90deg, var(--showcase-bg), transparent);
+    }
+    .showcase-carousel::after {
+      right: -2px;
+      background: linear-gradient(-90deg, var(--showcase-bg), transparent);
+    }
+
+    .showcase-row {
       display: flex;
       gap: 24px;
       overflow-x: auto;
-      padding: 20px 4px 40px;
+      padding: 24px 4px 48px;
       scroll-snap-type: x mandatory;
       scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
     }
     .showcase-row::-webkit-scrollbar { display: none; }
+
     .showcase-card {
       flex: 0 0 260px;
       scroll-snap-align: start;
@@ -716,8 +763,12 @@
       padding: 8px;
       background: linear-gradient(160deg, #2a2a2e, #1c1c1e);
       box-shadow:
-        0 40px 80px -30px rgba(0,0,0,0.5),
+        0 40px 80px -30px rgba(0,0,0,0.35),
         inset 0 0 0 1px rgba(255,255,255,0.06);
+      transition: transform 0.4s ease;
+    }
+    .showcase-card:hover {
+      transform: translateY(-6px);
     }
     .showcase-card .phone-screen {
       border-radius: 30px;
@@ -726,19 +777,87 @@
     .showcase-tag {
       margin-top: 18px;
       display: flex; flex-direction: column; gap: 4px;
-      padding: 0 8px;
+      padding: 0 8px 4px;
     }
     .showcase-tag small {
       font-family: var(--font-mono);
       font-size: 11px;
-      color: var(--primary-light);
+      color: var(--primary);
       letter-spacing: 0.1em;
+      font-weight: 700;
     }
     .showcase-tag strong {
       font-family: var(--font-display);
-      font-weight: 500;
+      font-weight: 600;
       font-size: 18px;
       color: #fff;
+    }
+
+    /* Carousel nav buttons */
+    .carousel-btn {
+      position: absolute;
+      top: calc(50% - 40px);
+      transform: translateY(-50%);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--surface);
+      display: grid;
+      place-items: center;
+      z-index: 10;
+      box-shadow:
+        0 14px 32px -10px rgba(28,28,30,0.25),
+        0 4px 8px -2px rgba(28,28,30,0.08);
+      transition: all 0.25s ease;
+      color: var(--ink);
+    }
+    .carousel-btn:hover {
+      background: var(--ink);
+      color: #fff;
+      transform: translateY(-50%) scale(1.06);
+    }
+    .carousel-btn.prev { left: -16px; }
+    .carousel-btn.next { right: -16px; }
+    .carousel-btn svg { width: 22px; height: 22px; }
+    .carousel-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    @media (max-width: 720px) {
+      .carousel-btn {
+        width: 44px;
+        height: 44px;
+      }
+      .carousel-btn.prev { left: 4px; }
+      .carousel-btn.next { right: 4px; }
+      .carousel-btn svg { width: 18px; height: 18px; }
+    }
+
+    /* Carousel dots */
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(28,28,30,0.18);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+    }
+    .carousel-dot:hover { background: rgba(28,28,30,0.4); }
+    .carousel-dot.active {
+      background: var(--primary);
+      width: 28px;
+      border-radius: 4px;
     }
 
     .cta {
@@ -1087,36 +1206,49 @@
     </div>
   </section>
 
+  <!-- ============== SHOWCASE CAROUSEL ============== -->
   <section class="showcase" id="vitrin">
     <div class="container">
       <div class="section-head reveal" style="margin-bottom: 0;">
         <span class="eyebrow">Vitrin</span>
-        <h2 class="display-2">Tek el, <span class="italic" style="color: var(--primary-light);">tüm</span> sınav.</h2>
+        <h2 class="display-2">Tek el, <span class="italic ink-orange">tüm</span> sınav.</h2>
         <p class="lead">Liste, detay, soru, çözüm, istatistik — Pronova'nın tüm kritik ekranları sade ve hızlı bir akış için tasarlandı.</p>
       </div>
 
-      <div class="showcase-row">
-        <div class="showcase-card reveal">
-          <div class="phone-screen"><img src="images/screen-home.png" alt="Ana ekran" /></div>
-          <div class="showcase-tag"><small>01 / ANA EKRAN</small><strong>Kategoriler</strong></div>
+      <div class="showcase-carousel reveal" id="carousel">
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Önceki ekran">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <div class="showcase-row" id="showcaseRow">
+          <div class="showcase-card">
+            <div class="phone-screen"><img src="images/screen-home.png" alt="Ana ekran" /></div>
+            <div class="showcase-tag"><small>01 / ANA EKRAN</small><strong>Kategoriler</strong></div>
+          </div>
+          <div class="showcase-card">
+            <div class="phone-screen"><img src="images/screen-exams.png" alt="Sınav listesi" /></div>
+            <div class="showcase-tag"><small>02 / LİSTE</small><strong>Sınavlar</strong></div>
+          </div>
+          <div class="showcase-card">
+            <div class="phone-screen"><img src="images/screen-detail.png" alt="Sınav detayı" /></div>
+            <div class="showcase-tag"><small>03 / DETAY</small><strong>Bölümler</strong></div>
+          </div>
+          <div class="showcase-card">
+            <div class="phone-screen"><img src="images/screen-question.png" alt="Soru çözümü" /></div>
+            <div class="showcase-tag"><small>04 / SORU</small><strong>Çözüm</strong></div>
+          </div>
+          <div class="showcase-card">
+            <div class="phone-screen"><img src="images/screen-stats.png" alt="İstatistikler" /></div>
+            <div class="showcase-tag"><small>05 / TAKİP</small><strong>İstatistikler</strong></div>
+          </div>
         </div>
-        <div class="showcase-card reveal delay-1">
-          <div class="phone-screen"><img src="images/screen-exams.png" alt="Sınav listesi" /></div>
-          <div class="showcase-tag"><small>02 / LİSTE</small><strong>Sınavlar</strong></div>
-        </div>
-        <div class="showcase-card reveal delay-2">
-          <div class="phone-screen"><img src="images/screen-detail.png" alt="Sınav detayı" /></div>
-          <div class="showcase-tag"><small>03 / DETAY</small><strong>Bölümler</strong></div>
-        </div>
-        <div class="showcase-card reveal delay-3">
-          <div class="phone-screen"><img src="images/screen-question.png" alt="Soru çözümü" /></div>
-          <div class="showcase-tag"><small>04 / SORU</small><strong>Çözüm</strong></div>
-        </div>
-        <div class="showcase-card reveal delay-4">
-          <div class="phone-screen"><img src="images/screen-stats.png" alt="İstatistikler" /></div>
-          <div class="showcase-tag"><small>05 / TAKİP</small><strong>İstatistikler</strong></div>
-        </div>
+
+        <button class="carousel-btn next" id="nextBtn" aria-label="Sonraki ekran">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
       </div>
+
+      <div class="carousel-dots" id="carouselDots"></div>
     </div>
   </section>
 
@@ -1200,6 +1332,111 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+    /* ============== Showcase carousel ============== */
+    (function () {
+      const row = document.getElementById('showcaseRow');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const dotsContainer = document.getElementById('carouselDots');
+      const carousel = document.getElementById('carousel');
+      const cards = Array.from(row.querySelectorAll('.showcase-card'));
+      if (!cards.length) return;
+
+      // Build dots
+      cards.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Slayt ' + (i + 1));
+        dot.addEventListener('click', () => {
+          stopAutoplay();
+          scrollToCard(i);
+        });
+        dotsContainer.appendChild(dot);
+      });
+      const dots = Array.from(dotsContainer.querySelectorAll('.carousel-dot'));
+
+      const cardStep = () => {
+        if (cards.length < 2) return cards[0].offsetWidth + 24;
+        return cards[1].offsetLeft - cards[0].offsetLeft;
+      };
+
+      const currentIndex = () => {
+        return Math.round(row.scrollLeft / cardStep());
+      };
+
+      const maxIndex = () => {
+        // last index where the card is still visible at start of view
+        const visible = Math.floor(row.clientWidth / cardStep());
+        return Math.max(0, cards.length - Math.max(1, visible));
+      };
+
+      const scrollToCard = (i) => {
+        const clamped = Math.max(0, Math.min(maxIndex(), i));
+        row.scrollTo({ left: cardStep() * clamped, behavior: 'smooth' });
+      };
+
+      const updateUI = () => {
+        const idx = currentIndex();
+        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+        prevBtn.disabled = idx <= 0;
+        nextBtn.disabled = idx >= maxIndex();
+      };
+
+      prevBtn.addEventListener('click', () => {
+        stopAutoplay();
+        scrollToCard(currentIndex() - 1);
+      });
+      nextBtn.addEventListener('click', () => {
+        stopAutoplay();
+        scrollToCard(currentIndex() + 1);
+      });
+
+      let scrollDebounce;
+      row.addEventListener('scroll', () => {
+        clearTimeout(scrollDebounce);
+        scrollDebounce = setTimeout(updateUI, 80);
+      }, { passive: true });
+
+      window.addEventListener('resize', updateUI);
+
+      // Keyboard navigation
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft')  { stopAutoplay(); scrollToCard(currentIndex() - 1); }
+        if (e.key === 'ArrowRight') { stopAutoplay(); scrollToCard(currentIndex() + 1); }
+      });
+      carousel.tabIndex = 0;
+
+      // Autoplay
+      let autoplayTimer = null;
+      const startAutoplay = () => {
+        if (autoplayTimer) return;
+        autoplayTimer = setInterval(() => {
+          const idx = currentIndex();
+          const next = idx >= maxIndex() ? 0 : idx + 1;
+          row.scrollTo({ left: cardStep() * next, behavior: 'smooth' });
+        }, 4500);
+      };
+      const stopAutoplay = () => {
+        if (!autoplayTimer) return;
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      };
+
+      carousel.addEventListener('mouseenter', stopAutoplay);
+      carousel.addEventListener('mouseleave', startAutoplay);
+      carousel.addEventListener('touchstart', stopAutoplay, { passive: true });
+
+      // Start autoplay only when carousel is visible
+      const visObs = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) startAutoplay();
+        else stopAutoplay();
+      }, { threshold: 0.3 });
+      visObs.observe(carousel);
+
+      // Initial state after layout settles
+      requestAnimationFrame(updateUI);
+    })();
   </script>
 </body>
 </html>
