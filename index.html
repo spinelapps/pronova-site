@@ -203,14 +203,13 @@
       letter-spacing: -0.02em;
     }
     .logo-mark {
-      width: 30px; height: 30px;
+      width: 36px; height: 36px;
+      flex-shrink: 0;
       border-radius: 9px;
-      background: var(--primary);
-      display: grid; place-items: center;
-      color: #fff;
-      box-shadow: inset 0 -6px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      box-shadow: 0 4px 12px -2px rgba(249,115,22,0.35);
     }
-    .logo-mark svg { width: 16px; height: 16px; }
+    .logo-mark svg { width: 100%; height: 100%; display: block; }
     .nav-links {
       display: flex; gap: 36px;
       font-size: 14px; font-weight: 500;
@@ -963,9 +962,18 @@
 
   <header class="nav" id="nav">
     <div class="container nav-inner">
-      <a href="#" class="logo">
-        Pronova
-      </a>
+        <a href="#" class="logo">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+              <rect width="108" height="108" rx="24" fill="#F97316"/>
+              <path fill="#FFFFFF" d="M30,36 Q30,28 38,28 L70,28 Q78,28 78,36 L78,68 Q78,76 70,76 L60,76 L54,86 L48,76 L38,76 Q30,76 30,68 Z"/>
+              <path fill="#FF8C42" d="M40,44 Q40,40 44,40 Q48,40 48,44 L48,52 Q48,58 42,60 L40,58 Q44,56 44,52 L44,50 Q40,50 40,44 Z"/>
+              <path fill="#FF8C42" d="M54,44 Q54,40 58,40 Q62,40 62,44 L62,52 Q62,58 56,60 L54,58 Q58,56 58,52 L58,50 Q54,50 54,44 Z"/>
+              <line x1="38" y1="66" x2="70" y2="66" stroke="#FFB380" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </span>
+                    Pronova
+        </a>
       <nav class="nav-links">
         <a href="#kategoriler">Kategoriler</a>
         <a href="#ozellikler">Özellikler</a>
@@ -1030,7 +1038,7 @@
             </div>
             <div class="fc-text">
               <small>Gün Serisi</small>
-              <strong>2 gün</strong>
+              <strong>5 gün</strong>
             </div>
           </div>
         </div>
@@ -1046,7 +1054,7 @@
           <div class="stat-label">Hazır deneme sınavı</div>
         </div>
         <div class="stat">
-          <div class="stat-value">80</div>
+          <div class="stat-value">550<sup>+</sup></div>
           <div class="stat-label">Soru / tam deneme</div>
         </div>
         <div class="stat">
@@ -1078,7 +1086,7 @@
           <div class="cat-stats">
             <div><strong>9</strong><span>Sınav</span></div>
             <div><strong>80</strong><span>Soru</span></div>
-            <div><strong>180dk</strong><span>Süre</span></div>
+            <div><strong>9</strong><span>Bölüm</span></div>
           </div>
         </article>
 
@@ -1090,7 +1098,7 @@
           <div class="cat-stats">
             <div><strong>21</strong><span>Sınav</span></div>
             <div><strong>220</strong><span>Soru</span></div>
-            <div><strong>150dk</strong><span>Süre</span></div>
+            <div><strong>8</strong><span>Bölüm</span></div>
           </div>
         </article>
 
@@ -1102,7 +1110,7 @@
           <div class="cat-stats">
             <div><strong>23</strong><span>Sınav</span></div>
             <div><strong>250</strong><span>Soru</span></div>
-            <div><strong>YKS</strong><span>Kapsamı</span></div>
+            <div><strong>11</strong><span>Bölüm</span></div>
           </div>
         </article>
       </div>
@@ -1151,13 +1159,13 @@
           </ul>
         </div>
         <div class="feature-visual tinted-blue">
-          <div class="anno anno-1"><span class="anno-dot blue"></span> 2 günlük seri</div>
+          <div class="anno anno-1"><span class="anno-dot blue"></span> 5 günlük seri</div>
           <div class="phone-sm">
             <div class="phone-screen">
               <img src="images/screen-stats.png" alt="İstatistikler ekranı" />
             </div>
           </div>
-          <div class="anno anno-2"><span class="anno-dot green"></span> Haftalık takip</div>
+          <div class="anno anno-2"><span class="anno-dot green"></span> İstatistik özeti</div>
         </div>
       </div>
 
@@ -1167,13 +1175,13 @@
           <h3>Tek bir bölüme odaklanmak istediğinde.</h3>
           <p>Tüm denemeyi çözmek zorunda değilsin. Sadece zayıf olduğun bölümü — Cloze Test, Cümle Tamamlama, Çeviri ya da Okuduğunu Anlama — seçip o alana odaklanabilirsin. Her bölüm gerçek sınavdaki süre ve soru sayısını birebir korur.</p>
           <ul class="feature-list">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></span>9 farklı soru tipi için ayrı denemeler</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></span>Tüm sınavlar için farklı soru tipi ve ayrı denemeler</li>
             <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></span>Her bölüm için açıklama ve süre bilgisi</li>
             <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></span>Dilediğin yerden devam edebileceğin yapı</li>
           </ul>
         </div>
         <div class="feature-visual tinted-pink">
-          <div class="anno anno-1"><span class="anno-dot"></span> 8 farklı bölüm</div>
+          <div class="anno anno-1"><span class="anno-dot"></span> Gerçek sınav formatı</div>
           <div class="phone-sm">
             <div class="phone-screen">
               <img src="images/screen-detail.png" alt="Sınav detay ekranı" />
@@ -1206,7 +1214,6 @@
     </div>
   </section>
 
-  <!-- ============== SHOWCASE CAROUSEL ============== -->
   <section class="showcase" id="vitrin">
     <div class="container">
       <div class="section-head reveal" style="margin-bottom: 0;">

@@ -153,13 +153,13 @@
       text-decoration: none;
     }
     .logo-mark {
-      width: 30px; height: 30px;
+      width: 36px; height: 36px;
+      flex-shrink: 0;
       border-radius: 9px;
-      background: var(--primary);
-      display: grid; place-items: center;
-      color: #fff;
+      overflow: hidden;
+      box-shadow: 0 4px 12px -2px rgba(249,115,22,0.35);
     }
-    .logo-mark svg { width: 16px; height: 16px; }
+    .logo-mark svg { width: 100%; height: 100%; display: block; }
 
     .hero {
       padding: 60px 0 40px;
@@ -297,9 +297,18 @@
 
   <header class="nav" id="nav">
     <div class="container nav-inner">
-      <a href="#" class="logo" onclick="window.location.href='index.html'; return false;">
-        Pronova
-      </a>
+        <a href="#" class="logo">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+              <rect width="108" height="108" rx="24" fill="#F97316"/>
+              <path fill="#FFFFFF" d="M30,36 Q30,28 38,28 L70,28 Q78,28 78,36 L78,68 Q78,76 70,76 L60,76 L54,86 L48,76 L38,76 Q30,76 30,68 Z"/>
+              <path fill="#FF8C42" d="M40,44 Q40,40 44,40 Q48,40 48,44 L48,52 Q48,58 42,60 L40,58 Q44,56 44,52 L44,50 Q40,50 40,44 Z"/>
+              <path fill="#FF8C42" d="M54,44 Q54,40 58,40 Q62,40 62,44 L62,52 Q62,58 56,60 L54,58 Q58,56 58,52 L58,50 Q54,50 54,44 Z"/>
+              <line x1="38" y1="66" x2="70" y2="66" stroke="#FFB380" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </span>
+            Pronova
+        </a>
       <a href="#" class="btn btn-secondary" onclick="window.location.href='index.html'; return false;">
         <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
         Ana Sayfaya Dön
@@ -379,11 +388,7 @@
       <p>Bu Kullanım Şartları'nı zaman zaman güncelleme hakkımız saklıdır. Değişiklikler uygulama içinde veya web sitemizde yayınlandığı tarihten itibaren geçerlidir. Uygulamayı kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir.</p>
 
       <h2>10. İletişim ve Telif İhlali Bildirimi</h2>
-      <p>Bu şartlarla ilgili sorularınız veya bir telif hakkı ihlali tespit etmeniz durumunda bize aşağıdaki adresten ulaşabilirsiniz:</p>
-      <p>
-        <strong>E-posta:</strong> <a href="mailto:spinelapps0@gmail.com">copyright@pronova.com</a><br>
-        <strong>Adres:</strong> Spinel Apps, İstanbul, Türkiye
-      </p>
+      <p>Bu şartlarla ilgili sorularınız veya bir telif hakkı ihlali tespit etmeniz durumunda bize ulaşabilirsiniz.</p>
       <p>Üçüncü şahıslar tarafından Pronova içeriğinin izinsiz kullanıldığını görürseniz, lütfen bize bildirin.</p>
     </div>
   </div>
